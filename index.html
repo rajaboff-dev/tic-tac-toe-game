@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Covered By Your Grace', cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .game-title {
+            font-size: 70px;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            gap: 40px;
+            transition: 0.3s all;
+        }
+        .dark{
+            background: #000;
+            color: #fff;
+        }
+        .dark .board-rectangle{
+            border: 1px solid #fff;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            width: 300px;
+            height: 300px;
+        }
+
+        .board-rectangle {
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .winner-text {
+            display: none;
+            width: 300px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .reset{
+            padding: 10px 20px;
+            font-size: 30px;
+            border: none;
+            border-radius: 30px;
+            background: #45e;
+            color: #fff;
+        }
+
+        .theme-changer {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 10px 20px;
+            font-size: 30px;
+            border: none;
+            background: #45e;
+            color: #fff;
+            border-bottom-left-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-changer">🌚</div>
+    <div class="game-title">Tic Tac Toe</div>
+    <div class="container">
+        <div rectangleIndex="0" class="board-rectangle"></div>
+        <div rectangleIndex="1"  class="board-rectangle"></div>
+        <div rectangleIndex="2"  class="board-rectangle"></div>
+        <div rectangleIndex="3"  class="board-rectangle"></div>
+        <div rectangleIndex="4" class="board-rectangle"></div>
+        <div rectangleIndex="5"  class="board-rectangle"></div>
+        <div rectangleIndex="6"  class="board-rectangle"></div>
+        <div rectangleIndex="7"  class="board-rectangle"></div>
+        <div rectangleIndex="8"  class="board-rectangle"></div>
+    </div>
+    <p class="message"></p>
+    <div class="winner-text"></div>
+    <button class="reset">Reset</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
